@@ -1,0 +1,55 @@
+body{
+    font-family: muli-regular;
+    font-size: 14px;
+    margin: 0;
+    color: #8d8b8b;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d6e2f3;
+    background-image: linear-gradient(rgba(48, 82, 122, 0.603), rgba(21, 42, 66, 0.548)), url("../images/group.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form{
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding: 35px 61px 35px;
+    background: #ffffff;
+    display: block;
+    margin-top: 0em;
+    box-shadow: 0 0 10px 0 rgb(152, 168, 185);
+    -webkit-box-shadow: 0 0 10px 0 rgb(220, 234, 250);
+    -moz-box-shadow: 0 0 10px 0 rgb(152, 168, 185);
+    -ms-box-shadow: 0 0 10px 0 rgb(220, 234, 250);
+    -o-box-shadow: 0 0 10px 0 rgb(152, 168, 185);
+}
+
+.textarea {
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+    display: block;
+    width: 100%;
+    height: 38px;
+    background: 0 0;
+    padding: 3px 42px 0;
+    color: #666;
+    font-family: muli-semibold;
+    font-size: 16px;
+}
+
+.textarea:hover {
+    border-bottom: 1px solid #9cf;
+}
+
+.textarea:focus {
+    outline: None;
+    border-bottom: 1px solid #9cf;
+}

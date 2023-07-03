@@ -1,0 +1,37 @@
+.navbar {
+    background: #accffe;
+    box-shadow: 0 0 10px rgba(172, 208, 255, 0.836);;
+}
+
+.nav-link {
+    font-size: 17px;
+    color: rgb(0, 70, 131);
+    padding: 5%;
+}
+
+.nav-link:focus {
+    font-size: 18px;
+    color: rgb(33, 96, 151);
+    border-bottom: 1px solid rgb(10, 48, 129);
+}
+
+.navbar-brand {
+    font-size: 25px;
+    color: rgb(0, 70, 131);
+}
+
+#logout {
+    padding: 10px;
+    color: black;
+    margin-left: 70%;
+    text-decoration: none;
+    padding: 5px 20px;
+    background: rgb(29, 64, 116);
+    color: #fff;
+    font-size: 15px;
+    border: none;
+}
+
+#logout:hover {
+    box-shadow: 0 0 5px rgb(25, 47, 70);
+}

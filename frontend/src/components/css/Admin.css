@@ -1,0 +1,16 @@
+.content {
+    margin-left: 100px;
+    margin-right: 180px;
+    margin-top: 10%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+
+.head {
+    vertical-align: bottom;
+    color: #accffe;
+    font-size: large;
+    border: 1px solid #accffe;
+}
+
