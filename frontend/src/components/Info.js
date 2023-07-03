@@ -11,7 +11,7 @@ const Info = () => {
         const year = d.getFullYear();
         return `${year}-${month < 10 ? "0" + month : month}-${day < 10 ? "0" + day : day}`;
       };
-  const HOST = "http://127.0.0.1:5000";
+  const HOST = "https://teach-for-india-volunteers.onrender.com";
   const [information, setInformation] = useState([
     {
       _id : 1,

@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./css/Details.css";
 
 const Details = () => {
-  const HOST = "http://127.0.0.1:5000";
+  const HOST = "https://teach-for-india-volunteers.onrender.com";
   const [location, setLocation] = useState('');
   const [lang, setLang] = useState('');
   const [avail, setAvail] = useState('');

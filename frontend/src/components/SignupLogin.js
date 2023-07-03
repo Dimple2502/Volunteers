@@ -10,7 +10,7 @@ import Animation from "./Animation";
 
 const SignupLogin = () => {
 
-  const HOST = "http://127.0.0.1:5000";
+  const HOST = "https://teach-for-india-volunteers.onrender.com";
 
   const context = useContext(alertContext);
   const { showAlert } = context;
