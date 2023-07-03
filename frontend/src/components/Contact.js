@@ -55,7 +55,7 @@ const Contact = () => {
               <input type="text" className="input mb-4" placeholder="Name" value={user} onChange={(e) => setUser(e.target.value)} required/>
               <input type="email" className="input mb-4" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
               <input type="tel" className="input mb-4" placeholder="Contact Number" value={num} onChange={(e) => setNum(e.target.value)} required/>
-
+              <label>Date of Birth</label><br/>
               <input type="date"
                 className="input mb-5"
                 placeholder="Date of Birth"

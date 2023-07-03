@@ -9,6 +9,9 @@ import plant from "./images/image-1.png";
 import Animation from "./Animation";
 
 const SignupLogin = () => {
+
+  const HOST = "http://127.0.0.1:5000";
+
   const context = useContext(alertContext);
   const { showAlert } = context;
 
@@ -22,6 +25,25 @@ const SignupLogin = () => {
     setIsSignup(!isSignup);
   };
 
+  const sendData = async () => {
+    let data = {
+      "username": user,
+      "password": password,
+    }
+
+    let apiCall = isSignup ? "/signup/Signup" : "/signup/login";
+    const response = await fetch(`${HOST}/api${apiCall}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const res = await response.json();
+    return res;
+    
+  };
+
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -29,13 +51,24 @@ const SignupLogin = () => {
       showAlert("Incomplete Credentials", "danger");
       navigate("/");
     } else {
-      showAlert("Login Successful", "success");
-      localStorage.setItem("token", true);
-      navigate("/contact");
+      if(isSignup) {
+       const response = await sendData();
+       showAlert(response.msg, "success");
+       localStorage.setItem("token", true);
+       navigate("/contact");
+      }
+      else {
+        const response = await sendData();
+        console.log(response);
+        if(response.success) {
+          localStorage.setItem("token", true);
+          navigate("/contact");
+        }
+        else {
+          showAlert(response.msg, "danger");
+        }
+      }
     }
-
-    console.log("Username:", user);
-    console.log("Password:", password);
 
     setUser("");
     setPassword("");

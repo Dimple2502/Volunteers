@@ -53,6 +53,7 @@ const Info = () => {
               information.map((i, index) => {
                 return (
                     <tr key={i._id}>
+                      <td>{index}</td>
                       <td>{i.location}</td>
                       <td>{i.languages}</td>
                       <td>{i.availability}</td>
